@@ -4,7 +4,7 @@ Official **Central Bank of Egypt** (Egypt) daily exchange rates in Node.js / Typ
 
 These are the *published central bank rates* required for tax filings, customs valuations, audits, and compliant invoicing — not moving market rates. Every response carries the publisher's own publication date.
 
-Powered by [AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbe/). Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — 300 requests/month, no credit card.
+Powered by [AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbe/). Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required.
 
 ## Install
 
@@ -41,6 +41,14 @@ const series = await getHistory(
   { apiKey: 'art_live_...' }
 );
 ```
+
+## Currencies covered
+
+Central Bank of Egypt currently publishes rates covering **19 currencies** (as of the latest table):
+
+`AED` · `AUD` · `BHD` · `CAD` · `CHF` · `CNY` · `DKK` · `EGP` · `EUR` · `GBP` · `JOD` · `JPY` · `KWD` · `NOK` · `OMR` · `QAR` · `SAR` · `SEK` · `USD`
+
+Pairs the central bank does not print directly are resolved from this table (see below).
 
 ## Published vs derived rates
 
