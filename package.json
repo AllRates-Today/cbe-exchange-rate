@@ -1,6 +1,6 @@
 {
   "name": "cbe-exchange-rate",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Official Central Bank of Egypt (Egypt) daily exchange rates — 18 currencies vs EGP, history since 2026. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "cbe",
