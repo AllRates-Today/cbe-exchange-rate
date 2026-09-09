@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'EGP', { apiKey: 'art_live_...' });
 {
   bank: 'cbe',
   name: 'Central Bank of Egypt',
-  rate_date: '2026-08-11',   // Central Bank of Egypt's own publication date
+  rate_date: '2026-09-09',   // Central Bank of Egypt's own publication date
   source: 'USD',
   target: 'EGP',
-  rate: 50.3517,
+  rate: 51.2786,
   rate_type: 'sell',
   derived: false,
   method: 'published',
@@ -98,10 +98,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbe',
   name: 'Central Bank of Egypt',
-  rate_date: '2026-08-11',
+  rate_date: '2026-09-09',
   rates: [
-    { "base": "USD", "quote": "EGP", "type": "sell", "value": 50.3517 },
-    { "base": "USD", "quote": "EGP", "type": "buy", "value": 50.2154 },
+    { "base": "USD", "quote": "EGP", "type": "sell", "value": 51.2786 },
+    { "base": "USD", "quote": "EGP", "type": "buy", "value": 51.1426 },
     // … the rest of the published table (18 currencies vs EGP)
   ],
   disclaimer: '…'
@@ -141,7 +141,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'cbe-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'EGP', from: '2026-01-01', to: '2026-08-11' },
+  { source: 'USD', target: 'EGP', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -154,11 +154,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'EGP',
   from: '2026-01-01',
-  to: '2026-08-11',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-11', rate: 50.3517, rate_type: 'sell', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 51.2786, rate_type: 'sell', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -171,9 +171,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Central Bank of Egypt currently publishes rates covering **19 currencies** (as of the latest table):
+Central Bank of Egypt currently publishes rates covering **18 currencies** against the EGP (as of the latest table):
 
-`AED` · `AUD` · `BHD` · `CAD` · `CHF` · `CNY` · `DKK` · `EGP` · `EUR` · `GBP` · `JOD` · `JPY` · `KWD` · `NOK` · `OMR` · `QAR` · `SAR` · `SEK` · `USD`
+🇦🇪 `AED` · 🇦🇺 `AUD` · 🇧🇭 `BHD` · 🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇨🇳 `CNY` · 🇩🇰 `DKK` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇯🇴 `JOD` · 🇯🇵 `JPY` · 🇰🇼 `KWD` · 🇳🇴 `NOK` · 🇴🇲 `OMR` · 🇶🇦 `QAR` · 🇸🇦 `SAR` · 🇸🇪 `SEK` · 🇺🇸 `USD`
 
 ## ⚖️ Published vs derived rates
 
@@ -236,6 +236,14 @@ getRate('USD', 'EGP', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2026 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/cbe.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/cbe/latest.json`
 
 ## 🔗 Links
 
