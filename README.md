@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'EGP', { apiKey: 'art_live_...' });
 {
   bank: 'cbe',
   name: 'Central Bank of Egypt',
-  rate_date: '2026-09-09',   // Central Bank of Egypt's own publication date
+  rate_date: '2026-09-27',   // Central Bank of Egypt's own publication date
   source: 'USD',
   target: 'EGP',
-  rate: 51.2786,
+  rate: 51.7866,
   rate_type: 'sell',
   derived: false,
   method: 'published',
@@ -113,10 +113,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbe',
   name: 'Central Bank of Egypt',
-  rate_date: '2026-09-09',
+  rate_date: '2026-09-27',
   rates: [
-    { "base": "USD", "quote": "EGP", "type": "sell", "value": 51.2786 },
-    { "base": "USD", "quote": "EGP", "type": "buy", "value": 51.1426 },
+    { "base": "USD", "quote": "EGP", "type": "sell", "value": 51.7866 },
+    { "base": "USD", "quote": "EGP", "type": "buy", "value": 51.6509 },
     // … the rest of the published table (18 currencies vs EGP)
   ],
   disclaimer: '…'
@@ -156,7 +156,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'cbe-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'EGP', from: '2026-01-01', to: '2026-09-09' },
+  { source: 'USD', target: 'EGP', from: '2026-01-01', to: '2026-09-27' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -169,11 +169,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'EGP',
   from: '2026-01-01',
-  to: '2026-09-09',
+  to: '2026-09-27',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-09', rate: 51.2786, rate_type: 'sell', derived: false, method: 'published' },
+    { date: '2026-09-27', rate: 51.7866, rate_type: 'sell', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
