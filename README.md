@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/cbe-exchange-rate.svg)](https://github.com/AllRates-Today/cbe-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/cbe-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![USD/EGP today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbe%3Fsource%3DUSD%26target%3DEGP&query=%24.rate&label=USD%2FEGP%20published%20by%20Central%20Bank%20of%20Egypt&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbe/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbe%3Fsource%3DUSD%26target%3DEGP&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbe/)
 
 **Official Central Bank of Egypt (Egypt) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Central Bank of Egypt itself prints, every business day.**
 
@@ -32,6 +34,55 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Central Bank of Egypt table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-10-07** by Central Bank of Egypt — 36 rates. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AED | EGP | buy | 14.2438 |
+| AED | EGP | sell | 14.283 |
+| AUD | EGP | buy | 36.3993 |
+| AUD | EGP | sell | 36.5017 |
+| BHD | EGP | buy | 138.7624 |
+| BHD | EGP | sell | 139.1512 |
+| CAD | EGP | buy | 36.7728 |
+| CAD | EGP | sell | 36.8736 |
+| CHF | EGP | buy | 62.8397 |
+| CHF | EGP | sell | 63.0302 |
+| CNY | EGP | buy | 7.8037 |
+| CNY | EGP | sell | 7.8246 |
+| DKK | EGP | buy | 7.8332 |
+| DKK | EGP | sell | 7.8544 |
+| EUR | EGP | buy | 58.5465 |
+| EUR | EGP | sell | 58.7132 |
+| GBP | EGP | buy | 69.1414 |
+| GBP | EGP | sell | 69.3469 |
+| JOD | EGP | buy | 73.6906 |
+| JOD | EGP | sell | 74.096 |
+| JPY | EGP | buy | 0.33043 |
+| JPY | EGP | sell | 0.331396 |
+| KWD | EGP | buy | 169.7611 |
+| KWD | EGP | sell | 170.2694 |
+| NOK | EGP | buy | 5.4642 |
+| NOK | EGP | sell | 5.4833 |
+| OMR | EGP | buy | 135.89 |
+| OMR | EGP | sell | 136.2704 |
+| QAR | EGP | buy | 14.3524 |
+| QAR | EGP | sell | 14.3923 |
+| SAR | EGP | buy | 13.9365 |
+| SAR | EGP | sell | 13.9752 |
+| SEK | EGP | buy | 5.2127 |
+| SEK | EGP | sell | 5.227 |
+| USD | EGP | buy | 52.3204 |
+| USD | EGP | sell | 52.46 |
+
+Source: [Official rates published by CBE, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbe/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 
