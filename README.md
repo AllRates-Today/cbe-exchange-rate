@@ -42,46 +42,46 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-14** by Central Bank of Egypt — 36 rates. Updated 2026-10-14.
+Published **2026-10-15** by Central Bank of Egypt — 36 rates. Updated 2026-10-15.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | EGP | buy | 14.4418 |
-| AED | EGP | sell | 14.4807 |
-| AUD | EGP | buy | 37.161 |
-| AUD | EGP | sell | 37.2644 |
-| BHD | EGP | buy | 140.3963 |
-| BHD | EGP | sell | 140.8787 |
-| CAD | EGP | buy | 37.3165 |
-| CAD | EGP | sell | 37.4177 |
-| CHF | EGP | buy | 63.6068 |
-| CHF | EGP | sell | 63.813 |
-| CNY | EGP | buy | 7.9251 |
-| CNY | EGP | sell | 7.9463 |
-| DKK | EGP | buy | 7.9393 |
-| DKK | EGP | sell | 7.9609 |
-| EUR | EGP | buy | 59.3484 |
-| EUR | EGP | sell | 59.5103 |
-| GBP | EGP | buy | 70.3439 |
-| GBP | EGP | sell | 70.5455 |
-| JOD | EGP | buy | 74.7066 |
-| JOD | EGP | sell | 75.1154 |
-| JPY | EGP | buy | 0.334733 |
-| JPY | EGP | sell | 0.335701 |
-| KWD | EGP | buy | 172.1016 |
-| KWD | EGP | sell | 172.6119 |
-| NOK | EGP | buy | 5.5828 |
-| NOK | EGP | sell | 5.6023 |
-| OMR | EGP | buy | 137.76 |
-| OMR | EGP | sell | 138.1415 |
-| QAR | EGP | buy | 14.5503 |
-| QAR | EGP | sell | 14.5903 |
-| SAR | EGP | buy | 14.1264 |
-| SAR | EGP | sell | 14.1652 |
-| SEK | EGP | buy | 5.3179 |
-| SEK | EGP | sell | 5.3363 |
-| USD | EGP | buy | 53.0417 |
-| USD | EGP | sell | 53.1817 |
+| AED | EGP | buy | 14.5374 |
+| AED | EGP | sell | 14.5763 |
+| AUD | EGP | buy | 36.9469 |
+| AUD | EGP | sell | 37.0491 |
+| BHD | EGP | buy | 141.3032 |
+| BHD | EGP | sell | 141.8239 |
+| CAD | EGP | buy | 37.5943 |
+| CAD | EGP | sell | 37.6955 |
+| CHF | EGP | buy | 64.3425 |
+| CHF | EGP | sell | 64.5268 |
+| CNY | EGP | buy | 7.9794 |
+| CNY | EGP | sell | 8.0006 |
+| DKK | EGP | buy | 8.0098 |
+| DKK | EGP | sell | 8.0314 |
+| EUR | EGP | buy | 59.8731 |
+| EUR | EGP | sell | 60.0355 |
+| GBP | EGP | buy | 70.749 |
+| GBP | EGP | sell | 70.972 |
+| JOD | EGP | buy | 75.1992 |
+| JOD | EGP | sell | 75.6094 |
+| JPY | EGP | buy | 0.338477 |
+| JPY | EGP | sell | 0.339408 |
+| KWD | EGP | buy | 173.2363 |
+| KWD | EGP | sell | 173.7469 |
+| NOK | EGP | buy | 5.6081 |
+| NOK | EGP | sell | 5.6299 |
+| OMR | EGP | buy | 138.6322 |
+| OMR | EGP | sell | 139.086 |
+| QAR | EGP | buy | 14.6462 |
+| QAR | EGP | sell | 14.6863 |
+| SAR | EGP | buy | 14.2271 |
+| SAR | EGP | sell | 14.2652 |
+| SEK | EGP | buy | 5.3564 |
+| SEK | EGP | sell | 5.371 |
+| USD | EGP | buy | 53.3914 |
+| USD | EGP | sell | 53.5314 |
 
 Source: [Official rates published by CBE, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbe/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
