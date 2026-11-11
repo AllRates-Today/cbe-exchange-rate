@@ -4,16 +4,16 @@
 [![license](https://img.shields.io/npm/l/cbe-exchange-rate.svg)](https://github.com/AllRates-Today/cbe-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/cbe-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
-[![USD/EGP today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbe%3Fsource%3DUSD%26target%3DEGP&query=%24.rate&label=USD%2FEGP%20published%20by%20Central%20Bank%20of%20Egypt&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbe/)
+[![USD/EGP today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbe%3Fsource%3DUSD%26target%3DEGP&query=%24.rate&label=USD%2FEGP%20official%2C%20Central%20Bank%20of%20Egypt&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbe/)
 [![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbe%3Fsource%3DUSD%26target%3DEGP&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbe/)
 
 **Official Central Bank of Egypt (Egypt) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Central Bank of Egypt itself prints, every business day.**
 
 ## 🚀 Why this client?
 
-- 🏛️ **Official published rates** — Central Bank of Egypt's own table, with the publisher's own `rate_date` on every response
+- 🏛️ **Official rates** — Central Bank of Egypt's own table, with the publisher's own `rate_date` on every response
 - 📅 **History back to 2026** — point-in-time tables and daily series for any past date
-- 🔀 **Published vs derived, always flagged** — computed inverse/cross pairs carry `derived: true`, never mixed with official prints
+- 🔀 **Official vs derived, always flagged** — computed inverse/cross pairs carry `derived: true`, never mixed with official prints
 - ⚡ **Zero dependencies** — pure ESM + CJS over global `fetch`; Node 18+, Bun, Deno, and edge runtimes
 - 🔷 **Type-safe** — full TypeScript definitions shipped with the package
 - 🧾 **Compliance-grade metadata** — `rate_type`, publication date, and source disclaimer on every response
@@ -24,7 +24,7 @@
 
 Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
 
-## 📈 Latest published table
+## 📈 Latest official table
 
 [![Latest Central Bank of Egypt table](https://allratestoday.com/api/open/central-bank/cbe/table.svg)](https://allratestoday.com/central-bank-rates-api/cbe/)
 
@@ -105,8 +105,8 @@ console.log(pair.rate, pair.rate_date); // the official Central Bank of Egypt ra
 
 ## 📚 API reference
 
-- [Latest pair rate](#latest-pair-rate) — one pair from the latest published table
-- [Full published table](#full-published-table) — everything the central bank printed, in one call
+- [Latest pair rate](#latest-pair-rate) — one pair from the latest official table
+- [Full official table](#full-official-table) — everything the central bank printed, in one call
 - [Table for a date](#table-for-a-date) — the official table for an invoice or filing date
 - [Daily time series](#daily-time-series) — one pair across a date range
 
@@ -114,7 +114,7 @@ console.log(pair.rate, pair.rate_date); // the official Central Bank of Egypt ra
 
 ### Latest pair rate
 
-Free plan and up. Pairs the central bank does not print directly are resolved from its table and flagged (see *Published vs derived rates* below).
+Free plan and up. Pairs the central bank does not print directly are resolved from its table and flagged (see *Official vs derived rates* below).
 
 ```js
 const pair = await getRate('USD', 'EGP', { apiKey: 'art_live_...' });
@@ -126,10 +126,10 @@ const pair = await getRate('USD', 'EGP', { apiKey: 'art_live_...' });
 {
   bank: 'cbe',
   name: 'Central Bank of Egypt',
-  rate_date: '2026-10-14',   // Central Bank of Egypt's own publication date
+  rate_date: '2026-11-11',   // Central Bank of Egypt's own publication date
   source: 'USD',
   target: 'EGP',
-  rate: 53.1817,
+  rate: 53.6246,
   rate_type: 'sell',
   derived: false,
   method: 'published',
@@ -137,7 +137,7 @@ const pair = await getRate('USD', 'EGP', { apiKey: 'art_live_...' });
 }
 ```
 
-### Full published table
+### Full official table
 
 Free plan and up. The complete table for the latest publication date.
 
@@ -154,11 +154,11 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbe',
   name: 'Central Bank of Egypt',
-  rate_date: '2026-10-14',
+  rate_date: '2026-11-11',
   rates: [
-    { "base": "USD", "quote": "EGP", "type": "sell", "value": 53.1817 },
-    { "base": "USD", "quote": "EGP", "type": "buy", "value": 53.0417 },
-    // … the rest of the published table (18 currencies vs EGP)
+    { "base": "USD", "quote": "EGP", "type": "sell", "value": 53.6246 },
+    { "base": "USD", "quote": "EGP", "type": "buy", "value": 53.4869 },
+    // … the rest of the official table (18 currencies vs EGP)
   ],
   disclaimer: '…'
 }
@@ -197,7 +197,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'cbe-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'EGP', from: '2026-01-01', to: '2026-10-14' },
+  { source: 'USD', target: 'EGP', from: '2026-01-01', to: '2026-11-11' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -210,11 +210,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'EGP',
   from: '2026-01-01',
-  to: '2026-10-14',
+  to: '2026-11-11',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-10-14', rate: 53.1817, rate_type: 'sell', derived: false, method: 'published' },
+    { date: '2026-11-11', rate: 53.6246, rate_type: 'sell', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -268,7 +268,7 @@ curl "https://allratestoday.com/api/v1/central-bank/cbe/latest?format=xml&api_ke
 - Evaluating? Agents can self-issue a trial key with no signup: `POST https://allratestoday.com/api/agent/keys` (send `Content-Type: application/json`) returns a 100-call key valid 7 days that covers the free-plan methods (latest table, pairs); dated tables and history need a [paid plan](https://allratestoday.com/pricing/). The MCP servers expose it as `request_trial_key`
 - Machine-readable site guide: [llms.txt](https://allratestoday.com/llms.txt) · [for-ai-agents](https://allratestoday.com/for-ai-agents/)
 
-## ⚖️ Published vs derived rates
+## ⚖️ Official vs derived rates
 
 If Central Bank of Egypt does not print a pair directly, the API resolves it from the central bank's own table and says so — official and computed values are never confused:
 
@@ -318,21 +318,21 @@ getRate('USD', 'EGP', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 
 ## 💡 Quota tips
 
-- Rates change once per business day — cache the published table locally and a small monthly quota goes a long way.
+- Rates change once per business day — cache the official table locally and a small monthly quota goes a long way.
 - Every request counts toward your AllRatesToday quota, shared across all AllRatesToday endpoints on your key.
 
 ## 📖 Methods reference
 
 | Method | Plan | Description |
 | ------ | ---- | ----------- |
-| `getRate(source, target, { apiKey })` | Free | Latest rate for one pair, resolved from the published table |
-| `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
+| `getRate(source, target, { apiKey })` | Free | Latest rate for one pair, resolved from the official table |
+| `getLatestRates({ apiKey })` | Free | The central bank's full latest official table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2026 |
 
 ## 📥 Bulk data (no key)
 
-Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+Need the whole archive rather than an API call? The same official tables are mirrored daily as open data:
 
 - Hugging Face: [AllRatesToday/central-bank-exchange-rates](https://huggingface.co/datasets/AllRatesToday/central-bank-exchange-rates) — one CSV per institution (`rates/cbe.csv`)
 - Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
@@ -342,7 +342,7 @@ Need the whole archive rather than an API call? The same published tables are mi
 
 - **Website:** [allratestoday.com](https://allratestoday.com)
 - [Central Bank of Egypt rates page](https://allratestoday.com/central-bank-rates-api/cbe/) — live table, publication cadence, FAQ
-- [All central bank sources](https://allratestoday.com/central-bank-rates-api/)
+- [All central bank sources](https://allratestoday.com/central-bank-rates-api/) · [Full list of 130+ central banks and tax authorities](https://allratestoday.com/central-bank-rates-api/institutions/) — one API, the same response shape for every source
 - [Download central bank rates](https://allratestoday.com/download-central-bank-rates/) — every bank's latest table and history as Excel, CSV or JSON
 - [Package docs on the site](https://allratestoday.com/docs/sdk/cbe-exchange-rate/) · [ERP integration guides](https://allratestoday.com/docs/integrations/)
 - [API documentation](https://allratestoday.com/docs/#central-bank) · [Interactive reference](https://allratestoday.com/api-reference/) · [Methodology](https://allratestoday.com/official-rates-methodology/)
