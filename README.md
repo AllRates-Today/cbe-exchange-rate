@@ -32,46 +32,46 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-12 by Central Bank of Egypt — 36 rates. Updated 2026-11-12.</summary>
+<summary>Table as text: published 2026-11-15 by Central Bank of Egypt — 36 rates. Updated 2026-11-15.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | EGP | buy | 14.5295 |
-| AED | EGP | sell | 14.5682 |
-| AUD | EGP | buy | 36.4432 |
-| AUD | EGP | sell | 36.5437 |
-| BHD | EGP | buy | 141.4774 |
-| BHD | EGP | sell | 141.9223 |
-| CAD | EGP | buy | 37.4572 |
-| CAD | EGP | sell | 37.563 |
-| CHF | EGP | buy | 64.1025 |
-| CHF | EGP | sell | 64.2931 |
-| CNY | EGP | buy | 8.003 |
-| CNY | EGP | sell | 8.024 |
-| DKK | EGP | buy | 7.917 |
-| DKK | EGP | sell | 7.9389 |
-| EUR | EGP | buy | 59.1821 |
-| EUR | EGP | sell | 59.3474 |
-| GBP | EGP | buy | 70.8051 |
-| GBP | EGP | sell | 71.0061 |
-| JOD | EGP | buy | 75.1624 |
-| JOD | EGP | sell | 75.5716 |
-| JPY | EGP | buy | 0.334222 |
-| JPY | EGP | sell | 0.335117 |
-| KWD | EGP | buy | 172.8991 |
-| KWD | EGP | sell | 173.4069 |
-| NOK | EGP | buy | 5.5853 |
-| NOK | EGP | sell | 5.6046 |
-| OMR | EGP | buy | 138.5968 |
-| OMR | EGP | sell | 138.9769 |
-| QAR | EGP | buy | 14.6286 |
-| QAR | EGP | sell | 14.691 |
-| SAR | EGP | buy | 14.219 |
-| SAR | EGP | sell | 14.2569 |
-| SEK | EGP | buy | 5.3547 |
-| SEK | EGP | sell | 5.373 |
-| USD | EGP | buy | 53.3653 |
-| USD | EGP | sell | 53.5047 |
+| AED | EGP | buy | 14.626 |
+| AED | EGP | sell | 14.6645 |
+| AUD | EGP | buy | 36.3757 |
+| AUD | EGP | sell | 36.4811 |
+| BHD | EGP | buy | 142.4254 |
+| BHD | EGP | sell | 142.8715 |
+| CAD | EGP | buy | 37.6421 |
+| CAD | EGP | sell | 37.748 |
+| CHF | EGP | buy | 64.0244 |
+| CHF | EGP | sell | 64.2138 |
+| CNY | EGP | buy | 8.0514 |
+| CNY | EGP | sell | 8.0741 |
+| DKK | EGP | buy | 7.9205 |
+| DKK | EGP | sell | 7.9422 |
+| EUR | EGP | buy | 59.208 |
+| EUR | EGP | sell | 59.3781 |
+| GBP | EGP | buy | 70.9948 |
+| GBP | EGP | sell | 71.1955 |
+| JOD | EGP | buy | 75.666 |
+| JOD | EGP | sell | 76.0771 |
+| JPY | EGP | buy | 0.336378 |
+| JPY | EGP | sell | 0.337358 |
+| KWD | EGP | buy | 173.9448 |
+| KWD | EGP | sell | 174.4537 |
+| NOK | EGP | buy | 5.6079 |
+| NOK | EGP | sell | 5.6255 |
+| OMR | EGP | buy | 139.5254 |
+| OMR | EGP | sell | 139.9064 |
+| QAR | EGP | buy | 14.7267 |
+| QAR | EGP | sell | 14.7893 |
+| SAR | EGP | buy | 14.3143 |
+| SAR | EGP | sell | 14.3523 |
+| SEK | EGP | buy | 5.3308 |
+| SEK | EGP | sell | 5.3473 |
+| USD | EGP | buy | 53.7229 |
+| USD | EGP | sell | 53.8626 |
 
 </details>
 
